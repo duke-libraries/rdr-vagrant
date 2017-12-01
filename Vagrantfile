@@ -13,6 +13,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 3000, host: 3000 # Rails
   config.vm.network :forwarded_port, guest: 8983, host: 8983 # Solr
   config.vm.network :forwarded_port, guest: 8984, host: 8984 # Fedora
+  config.vm.network :forwarded_port, guest: 8985, host: 8985 # Solr test
+  config.vm.network :forwarded_port, guest: 8986, host: 8986 # Fedora test
   config.vm.network :forwarded_port, guest: 8888, host: 8888 # Jasmine Tests
 
   config.vm.provider "virtualbox" do |v|
