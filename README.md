@@ -13,3 +13,7 @@ Vagrant VM for running RDR (Research Data Repository). This is a modified versio
 3. `vagrant up`
 
 You can shell into the machine with `vagrant ssh` or `ssh -p 2222 vagrant@localhost`
+
+## Submodule
+
+Includes [DUL RDR](https://github.com/duke-libraries/rdr) as a submodule

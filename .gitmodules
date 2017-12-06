@@ -1,0 +1,3 @@
+[submodule "rdr"]
+	path = rdr
+	url = https://github.com/duke-libraries/rdr.git
