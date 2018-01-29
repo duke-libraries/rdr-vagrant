@@ -11,6 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/xenial64"
 
   config.vm.network :forwarded_port, guest: 3000, host: 3000 # Rails
+  config.vm.network :forwarded_port, guest: 5432, host: 5432 # PostgreSQL
   config.vm.network :forwarded_port, guest: 8983, host: 8983 # Solr
   config.vm.network :forwarded_port, guest: 8984, host: 8984 # Fedora
   config.vm.network :forwarded_port, guest: 8985, host: 8985 # Solr test
