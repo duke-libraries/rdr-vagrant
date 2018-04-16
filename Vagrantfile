@@ -19,7 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :forwarded_port, guest: 8888, host: 8888 # Jasmine Tests
 
   config.vm.provider "virtualbox" do |v|
-    v.memory = 2048
+    v.memory = 4096
   end
 
   # Check our system locale -- make sure it is set to UTF-8
@@ -47,4 +47,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", path: "./install_scripts/rvm-ruby.sh", args: shared_dir, privileged: false
   config.vm.provision "shell", path: "./install_scripts/postgres.sh", args: shared_dir
   config.vm.provision "shell", path: "./install_scripts/fits.sh", args: shared_dir, privileged: false
+  config.vm.provision "shell", path: "./install_scripts/curb-deps.sh", args: shared_dir
 end
